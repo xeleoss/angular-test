@@ -4,12 +4,8 @@
 
 .all-attachments-header {
     font-family: 'Montserrat', sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
     color: #141414;
     padding-bottom: 28px;
 }
