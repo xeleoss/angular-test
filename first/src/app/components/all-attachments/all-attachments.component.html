@@ -1,0 +1,11 @@
+<div class="all-attachments">
+    <span class="all-attachments-header">Все вложения</span>
+    <div *ngIf="attachments$ === undefined">Загрузка..</div>
+    <div *ngIf="attachments$ === null" style="color: red;">Произошла ошибка при загрузке.</div>
+    <div *ngIf="attachments$ | async as attachments" class="all-attachments-block">
+        <app-attachment
+                *ngFor="let attachment of attachments"
+                [attachment]="attachment">
+        </app-attachment>
+    </div>
+</div>
