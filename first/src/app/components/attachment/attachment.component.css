@@ -9,6 +9,7 @@
     background: #EFF2F3;
     display: flex;
     place-content: center;
+    place-items: center;
 }
 
 .attachment-img > img {
@@ -21,7 +22,7 @@
     border-radius: 0 0 3px;
     display: flex;
     flex-direction: column;
-    padding: 8px 13px 0;
+    padding: 8px 13px 5px;
 }
 
 .attachment-bottom > .attachment-name, .attachment-description {
@@ -29,7 +30,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-bottom: 5px;
 }
 
 .attachment-name {

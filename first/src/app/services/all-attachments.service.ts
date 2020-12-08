@@ -27,6 +27,66 @@ export class AllAttachmentsService {
         description: 'Объем продаж овощей',
         url: `${window.location.href}assets/static/all-attachments/banans.png`,
         type: AttachmentEnum.Task,
+    }, {
+        name: 'Отчет_ФПС_1.const',
+        description: 'Остатки по бананам',
+        url: `${window.location.href}assets/static/all-attachments/report.png`,
+        type: AttachmentEnum.Task,
+    }, {
+        name: 'Список объектов.xls',
+        description: 'Летние акции',
+        url: `${window.location.href}assets/static/all-attachments/magnit.png`,
+        type: AttachmentEnum.Task,
+    }, {
+        name: 'Касса 25RT2008.svg',
+        description: 'Касса не работает',
+        type: AttachmentEnum.Request,
+    }, {
+        name: 'Фото_хлеб_1.jpg',
+        description: 'Объем продаж хлеба',
+        url: `${window.location.href}assets/static/all-attachments/bread.png`,
+
+        type: AttachmentEnum.Task,
+    },{
+        name: 'Фото_прилавка_2.jpg',
+        description: 'Объем продаж овощей',
+        url: `${window.location.href}assets/static/all-attachments/photo1.png`,
+        type: AttachmentEnum.Task,
+    }, {
+        name: 'Список объектов.xls',
+        description: 'Летние акции',
+        url: `${window.location.href}assets/static/all-attachments/magnit.png`,
+        type: AttachmentEnum.Task,
+    },{
+        name: 'Отчет_ФПС_1.const',
+        description: 'Остатки по бананам',
+        url: `${window.location.href}assets/static/all-attachments/report.png`,
+        type: AttachmentEnum.Task,
+    }, {
+        name: 'Фото_бананов.jpg',
+        description: 'Объем продаж овощей',
+        url: `${window.location.href}assets/static/all-attachments/banans.png`,
+        type: AttachmentEnum.Task,
+    }, {
+        name: 'Отчет_ФПС_1.const',
+        description: 'Остатки по бананам',
+        url: `${window.location.href}assets/static/all-attachments/report.png`,
+        type: AttachmentEnum.Task,
+    }, {
+        name: 'Список объектов.xls',
+        description: 'Летние акции',
+        url: `${window.location.href}assets/static/all-attachments/magnit.png`,
+        type: AttachmentEnum.Task,
+    }, {
+        name: 'Касса 25RT2008.svg',
+        description: 'Касса не работает',
+        type: AttachmentEnum.Request,
+    }, {
+        name: 'Фото_хлеб_1.jpg',
+        description: 'Объем продаж хлеба',
+        url: `${window.location.href}assets/static/all-attachments/bread.png`,
+
+        type: AttachmentEnum.Task,
     }];
 
     constructor() {

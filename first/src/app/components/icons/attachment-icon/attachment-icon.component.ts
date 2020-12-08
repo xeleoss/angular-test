@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import AttachmentEnum from '../../enums/AttachmentEnum';
+import AttachmentEnum from '../../../enums/AttachmentEnum';
 
 @Component({
   selector: 'app-attachment-icon',
