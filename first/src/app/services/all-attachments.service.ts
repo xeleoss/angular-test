@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import IAttachment from '../interfaces/IAttachment';
 import AttachmentEnum from '../enums/AttachmentEnum';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root',
@@ -17,7 +18,7 @@ export class AllAttachmentsService {
         description: 'Летние акции',
         url: `${window.location.href}assets/static/all-attachments/magnit.png`,
         type: AttachmentEnum.Task,
-    },{
+    }, {
         name: 'Отчет_ФПС_1.const',
         description: 'Остатки по бананам',
         url: `${window.location.href}assets/static/all-attachments/report.png`,
@@ -47,7 +48,7 @@ export class AllAttachmentsService {
         url: `${window.location.href}assets/static/all-attachments/bread.png`,
 
         type: AttachmentEnum.Task,
-    },{
+    }, {
         name: 'Фото_прилавка_2.jpg',
         description: 'Объем продаж овощей',
         url: `${window.location.href}assets/static/all-attachments/photo1.png`,
@@ -57,7 +58,7 @@ export class AllAttachmentsService {
         description: 'Летние акции',
         url: `${window.location.href}assets/static/all-attachments/magnit.png`,
         type: AttachmentEnum.Task,
-    },{
+    }, {
         name: 'Отчет_ФПС_1.const',
         description: 'Остатки по бананам',
         url: `${window.location.href}assets/static/all-attachments/report.png`,
@@ -85,14 +86,12 @@ export class AllAttachmentsService {
         name: 'Фото_хлеб_1.jpg',
         description: 'Объем продаж хлеба',
         url: `${window.location.href}assets/static/all-attachments/bread.png`,
-
         type: AttachmentEnum.Task,
     }];
 
-    constructor() {
-    }
+    constructor() {}
 
     getAll(): Observable<IAttachment[]> {
-        return of(this.attachments);
+        return of(this.attachments).pipe(delay(1000));
     }
 }
