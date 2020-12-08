@@ -1,6 +1,15 @@
 .attachment {
     width: 150px;
     height: 188px;
+    cursor: pointer;
+}
+
+.attachment:hover {
+    background: #51bd45;
+}
+
+.attachment:active {
+    background: #39d046;
 }
 
 .attachment-img {
