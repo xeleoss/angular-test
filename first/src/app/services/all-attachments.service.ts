@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import IAttachment from '../interfaces/IAttachment';
 import AttachmentEnum from '../enums/AttachmentEnum';
-import { delay } from 'rxjs/operators';
+import { delay, map } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root',
@@ -91,7 +91,13 @@ export class AllAttachmentsService {
 
     constructor() {}
 
-    getAll(): Observable<IAttachment[]> {
-        return of(this.attachments).pipe(delay(1000));
+    getAll(): Observable<IAttachment[] | {error: number}> {
+        return of(this.attachments).pipe(
+            delay(1000),
+            map(value => {
+                if (Math.random() > 0.8) return {error: 1};
+                return value;
+            }),
+        );
     }
 }

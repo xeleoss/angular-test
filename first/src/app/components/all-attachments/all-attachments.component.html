@@ -1,11 +1,17 @@
 <div class="all-attachments">
     <p class="all-attachments-header">Все вложения</p>
-    <p *ngIf="(attachments$ | async) === undefined">Загрузка..</p>
-    <p *ngIf="(attachments$ | async) === null" style="color: red;">Произошла ошибка при загрузке.</p>
-    <div *ngIf="attachments$ | async as attachments" class="all-attachments-block">
-        <app-attachment
-                *ngFor="let attachment of attachments"
-                [attachment]="attachment">
-        </app-attachment>
+    <div *ngIf="attachments$ | async as attachments; else loading" class="all-attachments-block">
+        <p *ngIf="attachments.error" style="color: red;">
+            Произошла ошибка при загрузке.
+        </p>
+        <ng-container *ngIf="!attachments.error">
+            <app-attachment
+                    *ngFor="let attachment of attachments"
+                    [attachment]="attachment">
+            </app-attachment>
+        </ng-container>
     </div>
+    <ng-template #loading>
+        <p>Загрузка..</p>
+    </ng-template>
 </div>
