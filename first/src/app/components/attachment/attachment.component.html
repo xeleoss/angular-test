@@ -1,0 +1,13 @@
+<div class="attachment" (click)="alert(attachment)">
+    <div class="attachment-img">
+        <img  [src]="attachment.url" [alt]="attachment.url">
+    </div>
+    <div class="attachment-bottom">
+        <span class="attachment-name">{{attachment.name}}</span>
+        <div class="attachment-icon-description">
+            <app-attachment-icon class="attachment-icon" [type]="attachment.type"></app-attachment-icon>
+            <span class="attachment-description">{{attachment.description}}</span>
+        </div>
+
+    </div>
+</div>
