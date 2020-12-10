@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import IAttachment from '../interfaces/IAttachment';
 import AttachmentEnum from '../enums/AttachmentEnum';
 import { delay, map } from 'rxjs/operators';
+import IRequestDto from '../interfaces/IRequestDto';
 
 @Injectable({
     providedIn: 'root',
@@ -91,12 +92,12 @@ export class AllAttachmentsService {
 
     constructor() {}
 
-    getAll(): Observable<IAttachment[] | {error: number}> {
+    getAll(): Observable<IRequestDto<IAttachment[]>> {
         return of(this.attachments).pipe(
             delay(1000),
             map(value => {
-                if (Math.random() > 0.8) return {error: 1};
-                return value;
+                if (Math.random() > 0.8) return {error: 1, payload: []};
+                return {error: 0, payload: value};
             }),
         );
     }

@@ -1,12 +1,12 @@
 <div class="all-attachments">
     <p class="all-attachments-header">Все вложения</p>
     <div *ngIf="attachments$ | async as attachments; else loading" class="all-attachments-block">
-        <p *ngIf="attachments.error" style="color: red;">
+        <p *ngIf="attachments.error !== 0" style="color: red;">
             Произошла ошибка при загрузке.
         </p>
-        <ng-container *ngIf="!attachments.error">
+        <ng-container *ngIf="attachments.error === 0">
             <app-attachment
-                    *ngFor="let attachment of attachments"
+                    *ngFor="let attachment of attachments.payload"
                     [attachment]="attachment">
             </app-attachment>
         </ng-container>
