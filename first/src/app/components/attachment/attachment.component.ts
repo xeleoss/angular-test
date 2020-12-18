@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import IAttachment from '../../interfaces/IAttachment';
+import Attachment from '../../interfaces/Attachment';
 
 @Component({
   selector: 'app-attachment',
@@ -7,14 +7,14 @@ import IAttachment from '../../interfaces/IAttachment';
   styleUrls: ['attachment.component.css'],
 })
 export class AttachmentComponent implements OnInit {
-  @Input() attachment!: IAttachment;
+  @Input() attachment!: Attachment;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  alert(attachment: IAttachment) {
+  alert(attachment: Attachment) {
     window.alert(JSON.stringify(attachment));
   }
 }
